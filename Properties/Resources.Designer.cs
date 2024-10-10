@@ -63,6 +63,26 @@ namespace WindowsFormsApp2.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _11910012822 {
+            get {
+                object obj = ResourceManager.GetObject("11910012822", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _80824ca68c16f57fec97e144c6518cc23ff4820b {
+            get {
+                object obj = ResourceManager.GetObject("80824ca68c16f57fec97e144c6518cc23ff4820b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap c7220c5137b7a8834a97fbbf4431eaeb {
             get {
                 object obj = ResourceManager.GetObject("c7220c5137b7a8834a97fbbf4431eaeb", resourceCulture);
@@ -86,6 +106,26 @@ namespace WindowsFormsApp2.Properties {
         internal static System.Drawing.Bitmap e7030700_a383_11ea_80f0_9e6980a25cc1 {
             get {
                 object obj = ResourceManager.GetObject("e7030700-a383-11ea-80f0-9e6980a25cc1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap screen_0 {
+            get {
+                object obj = ResourceManager.GetObject("screen-0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap screen_2 {
+            get {
+                object obj = ResourceManager.GetObject("screen-2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
