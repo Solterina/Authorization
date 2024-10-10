@@ -13,7 +13,7 @@ namespace WindowsFormsApp2
     public partial class Form1 : Form
     {
         private string correctLogin = "admin";
-        private string correctPassword = "password123";
+        private string correctPassword = "123";
         public Form1()
         {
             InitializeComponent();
@@ -28,17 +28,19 @@ namespace WindowsFormsApp2
             {
                 lblResult.Text = "Успешная авторизация";
                 lblResult.ForeColor = Color.White;
+                lblResult.Font = new Font("Time new roman", 20, FontStyle.Regular);
             }
             else
             {
                 lblResult.Text = "Неверный логин или пароль. Попробуйте снова.";
                 lblResult.ForeColor = Color.White;
+                lblResult.Font = new Font("Time new roman", 20, FontStyle.Regular);
             }
-                txtLogin.Clear();
-                txtPassword.Clear();
+            txtLogin.Clear();
+            txtPassword.Clear();
 
-                txtLogin.Focus();
-            }
+            txtLogin.Focus();
+            lblResult.Left = (this.ClientSize.Width - lblResult.Width)/2;
         }
     }
 }

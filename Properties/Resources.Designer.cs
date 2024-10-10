@@ -79,5 +79,15 @@ namespace WindowsFormsApp2.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap e7030700_a383_11ea_80f0_9e6980a25cc1 {
+            get {
+                object obj = ResourceManager.GetObject("e7030700-a383-11ea-80f0-9e6980a25cc1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
