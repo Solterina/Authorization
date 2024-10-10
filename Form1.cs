@@ -14,6 +14,7 @@ namespace WindowsFormsApp2
     {
         private string correctLogin = "admin";
         private string correctPassword = "123";
+        private int correcterror = 3;
         public Form1()
         {
             InitializeComponent();
@@ -24,23 +25,31 @@ namespace WindowsFormsApp2
             string enteredLogin = txtLogin.Text;
             string enteredPassword = txtPassword.Text;
 
-            if (enteredLogin == correctLogin && enteredPassword == correctPassword)
+            if (correcterror <= 0)
+            {
+                lblResult.Text = "У вас закончились попытки входа!";
+                lblResult.ForeColor = Color.Red;
+                lblResult.Font = new Font("Time new roman", 20, FontStyle.Regular);
+            }
+            else if (enteredLogin == correctLogin && enteredPassword == correctPassword)
             {
                 lblResult.Text = "Успешная авторизация";
                 lblResult.ForeColor = Color.White;
                 lblResult.Font = new Font("Time new roman", 20, FontStyle.Regular);
+                correcterror = 3;
             }
             else
             {
-                lblResult.Text = "Неверный логин или пароль. Попробуйте снова.";
+                lblResult.Text = $"Неверный логин или пароль. Попробуйте снова.\n Попыток отсалось {correcterror}";
                 lblResult.ForeColor = Color.White;
                 lblResult.Font = new Font("Time new roman", 20, FontStyle.Regular);
+                correcterror--;
             }
             txtLogin.Clear();
             txtPassword.Clear();
 
             txtLogin.Focus();
-            lblResult.Left = (this.ClientSize.Width - lblResult.Width)/2;
+            lblResult.Left = (this.ClientSize.Width - lblResult.Width) / 2;
         }
     }
 }
