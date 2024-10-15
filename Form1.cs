@@ -40,7 +40,7 @@ namespace WindowsFormsApp2
             }
             else
             {
-                lblResult.Text = $"Неверный логин или пароль. Попробуйте снова.\n Попыток отсалось {correcterror}";
+                lblResult.Text = $"Неверный логин или пароль. Попробуйте снова.\n Попыток осталось {correcterror}";
                 lblResult.ForeColor = Color.White;
                 lblResult.Font = new Font("Time new roman", 20, FontStyle.Regular);
                 correcterror--;
@@ -50,6 +50,12 @@ namespace WindowsFormsApp2
 
             txtLogin.Focus();
             lblResult.Left = (this.ClientSize.Width - lblResult.Width) / 2;
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            var form = new FormRegister();
+            form.Show();
         }
     }
 }
