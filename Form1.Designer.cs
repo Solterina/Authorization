@@ -36,6 +36,7 @@
             this.lblResult = new System.Windows.Forms.Label();
             this.txtawt = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
+            this.btnForgotPassword = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblLogin
@@ -126,12 +127,24 @@
             this.btnRegister.UseVisualStyleBackColor = true;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
+            // btnForgotPassword
+            // 
+            this.btnForgotPassword.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnForgotPassword.Location = new System.Drawing.Point(12, 12);
+            this.btnForgotPassword.Name = "btnForgotPassword";
+            this.btnForgotPassword.Size = new System.Drawing.Size(187, 33);
+            this.btnForgotPassword.TabIndex = 8;
+            this.btnForgotPassword.Text = "Забыли пароль?";
+            this.btnForgotPassword.UseVisualStyleBackColor = true;
+            this.btnForgotPassword.Click += new System.EventHandler(this.btnForgotPassword_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp2.Properties.Resources._80824ca68c16f57fec97e144c6518cc23ff4820b;
             this.ClientSize = new System.Drawing.Size(809, 436);
+            this.Controls.Add(this.btnForgotPassword);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.txtawt);
             this.Controls.Add(this.lblResult);
@@ -157,6 +170,7 @@
         private System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.Label txtawt;
         private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.Button btnForgotPassword;
     }
 }
 

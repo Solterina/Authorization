@@ -12,9 +12,12 @@ namespace WindowsFormsApp2
 {
     public partial class Form1 : Form
     {
-        private string correctLogin = "admin";
-        private string correctPassword = "123";
         private int correcterror = 3;
+        private string Login;
+        private string Password;
+        private string securityQuestion;
+        private string securityAnswer;
+
         public Form1()
         {
             InitializeComponent();
@@ -31,7 +34,7 @@ namespace WindowsFormsApp2
                 lblResult.ForeColor = Color.Red;
                 lblResult.Font = new Font("Time new roman", 20, FontStyle.Regular);
             }
-            else if (enteredLogin == correctLogin && enteredPassword == correctPassword)
+            else if (enteredLogin == Login && enteredPassword == Password)
             {
                 lblResult.Text = "Успешная авторизация";
                 lblResult.ForeColor = Color.White;
@@ -54,8 +57,21 @@ namespace WindowsFormsApp2
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            var form = new FormRegister();
-            form.Show();
+            var formRegister = new FormRegister();
+            formRegister.Show();
+            if (formRegister.IsDisposed)
+            {
+                Login = formRegister.GetLogin();
+                Password = formRegister.GetPassword();
+                securityAnswer = formRegister.GetSecurityAnswer();
+                securityQuestion = formRegister.GetSecurityQuestion();
+            }
+        }
+
+        private void btnForgotPassword_Click(object sender, EventArgs e)
+        {
+            var formRecoverPassword = new FormRecoverPassword(Login, Password, securityQuestion, securityAnswer);
+            formRecoverPassword.Show();
         }
     }
 }
